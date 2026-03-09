@@ -44,10 +44,10 @@ const StickAndGrowCascadingVSL = () => {
             For B2B SaaS Founders
           </div>
           
-          {/* THE HEADLINE FIX: Cascading, progressivly shorter lines. wordSpacing tightened. */}
+          {/* THE HEADLINE FIX: Aggressively tightened word spacing (-0.3em) for monospace font */}
           <h1 
             className="text-5xl md:text-7xl font-black mb-10 tracking-tighter uppercase mx-auto max-w-6xl"
-            style={{ wordSpacing: '-0.15em' }}
+            style={{ wordSpacing: '-0.3em' }}
           >
             <span className="block mb-2 whitespace-nowrap">Your content should hand you</span>
             <span className="block mb-2 whitespace-nowrap">

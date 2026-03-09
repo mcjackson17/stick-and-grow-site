@@ -44,16 +44,26 @@ const StickAndGrowCascadingVSL = () => {
             For B2B SaaS Founders
           </div>
           
-          {/* THE HEADLINE FIX: Aggressively tightened word spacing (-0.3em) for monospace font */}
+          {/* THE HEADLINE FIX: Re-stacked to 3 lines, forced tight word spacing, fixed React gap rendering */}
           <h1 
-            className="text-5xl md:text-7xl font-black mb-10 tracking-tighter uppercase mx-auto max-w-6xl"
+            className="text-5xl md:text-7xl font-black mb-10 tracking-tighter uppercase mx-auto max-w-6xl flex flex-col items-center"
             style={{ wordSpacing: '-0.3em' }}
           >
-            <span className="block mb-2 whitespace-nowrap">Your content should hand you</span>
             <span className="block mb-2 whitespace-nowrap">
-              <span className="inline-block bg-[#00ead9] px-2 pb-1 border-2 border-black -rotate-1 relative top-[-4px]">leads</span>, not just
+              Your content should
             </span>
-            <span className="block whitespace-nowrap">likes.</span>
+            <span className="block mb-2 whitespace-nowrap">
+              hand you{' '}
+              <span 
+                className="inline-block bg-[#00ead9] px-2 pb-1 border-2 border-black -rotate-1 relative top-[-4px]"
+                style={{ wordSpacing: 'normal' }}
+              >
+                leads
+              </span>,
+            </span>
+            <span className="block whitespace-nowrap">
+              not just likes.
+            </span>
           </h1>
 
           <p className="text-xl font-bold mb-12 text-gray-700 max-w-2xl mx-auto leading-relaxed">

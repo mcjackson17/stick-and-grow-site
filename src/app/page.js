@@ -6,7 +6,6 @@ import { Play, FileText, Mail, Linkedin, ArrowRight, CheckSquare, XSquare, Quote
 const StickAndGrowCascadingVSL = () => {
   const [activeFaq, setActiveFaq] = useState(null);
 
-  // Tactile Spring Animation for the Card Elements
   const springHover = {
     rest: { x: 0, y: 0, boxShadow: "8px 8px 0px 0px rgba(0,0,0,1)" },
     hover: { 
@@ -18,12 +17,10 @@ const StickAndGrowCascadingVSL = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#f8f9fa] text-[#111] p-4 md:p-8 font-mono selection:bg-[#00ead9]/40 overflow-x-hidden">
+    <div className="min-h-screen bg-[#f8f9fa] text-[#111] p-4 md:p-8 selection:bg-[#00ead9]/40 overflow-x-hidden">
       
-      {/* MAIN BLUEPRINT CANVAS PAPER */}
       <div className="max-w-7xl mx-auto border-[3px] border-black bg-white relative shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
         
-        {/* Subtle Blueprint/Graph Paper Overlay */}
         <div className="absolute inset-0 opacity-[0.04] pointer-events-none" 
              style={{ backgroundImage: 'linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
 
@@ -33,31 +30,25 @@ const StickAndGrowCascadingVSL = () => {
             STICK & GROW
           </div>
           <a href="https://calendly.com/dan-mcdermott/let-s-talk" target="_blank" rel="noopener noreferrer" className="bg-[#00ead9] border-2 border-black font-black px-6 py-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all uppercase text-sm">
-            Map My Engine
+            Get Started
           </a>
         </nav>
 
-        {/* --- 1. HERO SECTION (Cascading/Centered VSL Layout) --- */}
+        {/* --- 1. HERO SECTION --- */}
         <section className="relative z-10 p-8 md:p-16 border-b-[3px] border-black flex flex-col items-center text-center">
           
-          <div className="inline-block border-2 border-black px-3 py-1 text-xs font-black uppercase tracking-widest mb-8 bg-[#cc01ff] text-white -rotate-1">
+          <div className="inline-block border-2 border-black px-3 py-1 text-xs font-black uppercase tracking-widest mb-8 bg-[#cc01ff] text-white -rotate-1 font-mono">
             For B2B SaaS Founders
           </div>
           
-          {/* THE HEADLINE FIX: Re-stacked to 3 lines, forced tight word spacing, fixed React gap rendering */}
-          <h1 
-            className="text-5xl md:text-7xl font-black mb-10 tracking-tighter uppercase mx-auto max-w-6xl flex flex-col items-center"
-            style={{ wordSpacing: '-0.3em' }}
-          >
+          {/* THE HEADLINE FIX: Cleaned up spacing, no more hacks, natural font rendering */}
+          <h1 className="text-5xl md:text-7xl font-black mb-10 tracking-tighter uppercase mx-auto max-w-6xl flex flex-col items-center">
             <span className="block mb-2 whitespace-nowrap">
               Your content should
             </span>
             <span className="block mb-2 whitespace-nowrap">
               hand you{' '}
-              <span 
-                className="inline-block bg-[#00ead9] px-2 pb-1 border-2 border-black -rotate-1 relative top-[-4px]"
-                style={{ wordSpacing: 'normal' }}
-              >
+              <span className="inline-block bg-[#00ead9] px-2 pb-1 border-2 border-black -rotate-1 relative top-[-4px]">
                 leads
               </span>,
             </span>
@@ -70,13 +61,11 @@ const StickAndGrowCascadingVSL = () => {
             We extract your expertise into a repeatable system. You get the authority; your sales team gets the MQL list.
           </p>
 
-          {/* Massive, Centered VSL/Video Player */}
           <div className="w-full max-w-4xl relative mb-12 group">
             <motion.div 
               whileHover={{ scale: 1.01 }}
               className="aspect-video bg-gray-100 border-[3px] border-black shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center cursor-pointer relative overflow-hidden group-hover:shadow-[20px_20px_0px_0px_#cc01ff]"
             >
-               {/* Fake Video Scribbles */}
                <div className="absolute top-4 left-4 flex gap-2">
                 <div className="w-3 h-3 rounded-full bg-black" />
                 <div className="w-3 h-3 rounded-full bg-black" />
@@ -85,33 +74,30 @@ const StickAndGrowCascadingVSL = () => {
                 <div className="w-1/3 h-full bg-[#cc01ff]" />
               </div>
               
-              {/* Massive Play Button */}
               <div className="w-24 h-24 bg-[#00ead9] border-[3px] border-black rounded-full flex items-center justify-center group-hover:scale-110 transition-transform group-hover:bg-[#cc01ff]">
                 <Play fill="black" size={40} className="ml-2" />
               </div>
             </motion.div>
             
-            {/* Sticky Note for Video */}
-            <div className="absolute -bottom-6 -right-6 bg-[#e0fcf9] border-2 border-black p-3 text-sm font-black rotate-3 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] z-20 hidden md:block">
+            <div className="absolute -bottom-6 -right-6 bg-[#e0fcf9] border-2 border-black p-3 text-sm font-black rotate-3 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] z-20 hidden md:block font-mono">
               Watch: The Stick & Grow Blueprint (2 Min)
             </div>
           </div>
 
-          {/* CTA & Guarantee Side-by-Side (Stacked on Mobile) */}
           <div className="flex flex-col md:flex-row items-center gap-8 w-full max-w-4xl justify-center mt-4 mb-8">
             <a href="https://calendly.com/dan-mcdermott/let-s-talk" target="_blank" rel="noopener noreferrer" className="bg-black text-white px-8 py-5 text-xl font-black shadow-[8px_8px_0px_0px_#cc01ff] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all inline-flex items-center justify-center gap-3 w-full md:w-auto">
               BUILD MY CONTENT ENGINE <ArrowRight size={24}/>
             </a>
             
             <div className="bg-yellow-200 border-2 border-black p-4 -rotate-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] text-left w-full md:max-w-sm">
-                <span className="font-black uppercase text-sm border-b-2 border-black pb-1 mb-2 block">The Guarantee:</span>
+                <span className="font-black uppercase text-sm border-b-2 border-black pb-1 mb-2 block font-mono">The Guarantee:</span>
                 <span className="font-bold text-sm">Your first "Warm Lead Report" is delivered to your inbox on <span className="underline decoration-black decoration-4">Day 7</span>.</span>
             </div>
           </div>
 
         </section>
 
-        {/* --- 2. THE PROBLEM (Founders Content Trap) --- */}
+        {/* --- 2. THE PROBLEM --- */}
         <section className="relative z-10 p-8 md:p-16 border-b-[3px] border-black bg-red-50">
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center justify-center gap-3 mb-8">
@@ -140,7 +126,7 @@ const StickAndGrowCascadingVSL = () => {
           </div>
         </section>
 
-        {/* --- 3. THE TIMELINE (Sprint Roadmap) --- */}
+        {/* --- 3. THE TIMELINE --- */}
         <section className="relative z-10 p-8 md:p-16 border-b-[3px] border-black bg-white">
           <h2 className="text-4xl font-black uppercase tracking-tighter mb-12 text-center">The 30-Day Pipeline Sprint</h2>
           <div className="flex flex-col md:flex-row gap-6">
@@ -151,7 +137,7 @@ const StickAndGrowCascadingVSL = () => {
               { day: "Day 30", title: "The Autopilot", text: "The engine is humming: 20 posts, 4 blogs, 4 newsletters published. Pipeline is flowing." }
             ].map((step, i) => (
               <div key={i} className="flex-1 border-2 border-black p-6 relative bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                <div className="bg-black text-white text-xs font-black inline-block px-2 py-1 mb-4">{step.day}</div>
+                <div className="bg-black text-white text-xs font-black inline-block px-2 py-1 mb-4 font-mono">{step.day}</div>
                 <h3 className="text-xl font-black mb-2 uppercase">{step.title}</h3>
                 <p className="text-sm font-bold text-gray-600 leading-relaxed">{step.text}</p>
                 {i !== 3 && <ArrowRight className="hidden md:block absolute -right-5 top-1/2 -translate-y-1/2 text-black z-10" size={24}/>}
@@ -168,7 +154,7 @@ const StickAndGrowCascadingVSL = () => {
           </a>
         </section>
 
-        {/* --- 4. THE QUALIFICATION (Who is/isn't this for) --- */}
+        {/* --- 4. THE QUALIFICATION --- */}
         <section className="relative z-10 flex flex-col md:flex-row border-b-[3px] border-black">
           <div className="flex-1 p-8 md:p-16 bg-[#e0fcf9] border-b-[3px] md:border-b-0 md:border-r-[3px] border-black">
             <h2 className="text-3xl font-black uppercase mb-8">We Build For:</h2>
@@ -188,7 +174,7 @@ const StickAndGrowCascadingVSL = () => {
           </div>
         </section>
 
-        {/* --- 5. THE SYSTEM (Deliverables Grid) --- */}
+        {/* --- 5. THE SYSTEM --- */}
         <section className="relative z-10 p-8 md:p-16 border-b-[3px] border-black bg-white">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-4">The Content Engine</h2>
@@ -202,7 +188,7 @@ const StickAndGrowCascadingVSL = () => {
               { label: "04 / Visibility", title: "5 Social Posts", icon: <Linkedin/>, text: "Daily visibility to capture top-of-funnel intent." }
             ].map((item, i) => (
               <motion.div key={i} variants={springHover} initial="rest" whileHover="hover" className={`border-[3px] border-black p-6 bg-white relative ${i % 2 === 0 ? 'rotate-1' : '-rotate-1'}`}>
-                <div className="text-[10px] font-black uppercase tracking-widest text-[#cc01ff] mb-4">{item.label}</div>
+                <div className="text-[10px] font-black uppercase tracking-widest text-[#cc01ff] mb-4 font-mono">{item.label}</div>
                 {React.cloneElement(item.icon, { size: 32, className: "mb-4 text-gray-400" })}
                 <h3 className="text-2xl font-black mb-3">{item.title}</h3>
                 <p className="text-sm font-bold text-gray-600">{item.text}</p>
@@ -211,7 +197,7 @@ const StickAndGrowCascadingVSL = () => {
           </div>
         </section>
 
-        {/* --- 6. TESTIMONIALS (Sketched Notes) --- */}
+        {/* --- 6. TESTIMONIALS --- */}
         <section className="relative z-10 p-8 md:p-16 border-b-[3px] border-black bg-[#f4f4f5] overflow-hidden">
           <h2 className="text-4xl font-black uppercase tracking-tighter mb-12 text-center">Proof It Works</h2>
           <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
@@ -225,38 +211,33 @@ const StickAndGrowCascadingVSL = () => {
                 <Quote size={20} className="mb-3 opacity-50" />
                 <p className="font-bold text-sm leading-relaxed mb-6 italic">"{t.text}"</p>
                 <div className="font-black text-sm uppercase">{t.author}</div>
-                <div className="text-xs font-bold text-gray-600 uppercase">{t.role}</div>
+                <div className="text-xs font-bold text-gray-600 uppercase font-mono">{t.role}</div>
               </div>
             ))}
           </div>
         </section>
 
-        {/* --- 7. FOUNDER BIO (Dan McDermott) --- */}
+        {/* --- 7. FOUNDER BIO --- */}
         <section className="relative z-10 p-8 md:p-16 border-b-[3px] border-black bg-[#fdfdfd] flex flex-col md:flex-row gap-12 items-center">
           
-          {/* The Polaroid Container */}
           <div className="w-64 h-80 bg-white border-[3px] border-black p-3 pb-12 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] -rotate-3 shrink-0 flex flex-col relative group hover:rotate-0 transition-transform">
             <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-16 h-8 bg-[#00ead9]/40 border border-black/20 backdrop-blur-sm -rotate-2 z-10" />
             
-            {/* The Actual Image (Grayscale/Halftone filter) */}
             <div className="flex-1 border-2 border-black overflow-hidden bg-gray-100 relative">
               <img 
                 src="/founder.png"  
                 alt="Dan McDermott" 
                 className="w-full h-full object-cover grayscale contrast-125" 
               />
-              {/* Halftone sketch overlay effect */}
               <div className="absolute inset-0 opacity-[0.15] mix-blend-overlay" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '4px 4px' }} />
             </div>
 
-            {/* Hand-written Label */}
             <div className="pt-4 text-center font-black uppercase text-sm italic">
               Dan McDermott<br/>
-              <span className="text-[10px] text-[#cc01ff] not-italic tracking-widest">CHIEF ARCHITECT</span>
+              <span className="text-[10px] text-[#cc01ff] not-italic tracking-widest font-mono">CHIEF ARCHITECT</span>
             </div>
           </div>
 
-          {/* BEEFED UP ABOUT SECTION (No extra length) */}
           <div>
             <h2 className="text-4xl font-black uppercase tracking-tighter mb-6">Why I built this.</h2>
             <p className="text-lg font-bold text-gray-700 leading-relaxed mb-4">
@@ -268,7 +249,7 @@ const StickAndGrowCascadingVSL = () => {
           </div>
         </section>
 
-        {/* --- 8. OBJECTION CRUSHER (FAQ Accordion) --- */}
+        {/* --- 8. OBJECTION CRUSHER (FAQ) --- */}
         <section className="relative z-10 p-8 md:p-16 border-b-[3px] border-black bg-white">
           <h2 className="text-4xl font-black uppercase tracking-tighter mb-12 text-center">Skeptical? Good.</h2>
           <div className="max-w-3xl mx-auto space-y-4">
@@ -284,7 +265,7 @@ const StickAndGrowCascadingVSL = () => {
                 </div>
                 {activeFaq === i && (
                   <div className="p-6 pt-0 font-bold text-gray-600 border-t-2 border-dashed border-gray-200">
-                    <span className="text-[#00ead9] font-black mr-2">A:</span>{faq.a}
+                    <span className="text-[#00ead9] font-black mr-2 font-mono">A:</span>{faq.a}
                   </div>
                 )}
               </div>
@@ -292,7 +273,7 @@ const StickAndGrowCascadingVSL = () => {
           </div>
         </section>
 
-        {/* --- 9. FINAL FOOTER CTA --- */}
+        {/* --- 9. FINAL CTA --- */}
         <section className="p-8 md:p-20 text-center bg-[#00ead9] relative">
           <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-8 mt-4">
             Start posting <span className="bg-black text-white px-4 py-1 inline-block -rotate-2">for revenue.</span>
@@ -304,8 +285,7 @@ const StickAndGrowCascadingVSL = () => {
 
       </div>
       
-      {/* Small copyright footer outside the main blueprint block */}
-      <div className="max-w-7xl mx-auto text-center mt-8 text-xs font-black uppercase tracking-widest text-gray-400">
+      <div className="max-w-7xl mx-auto text-center mt-8 text-xs font-black uppercase tracking-widest text-gray-400 font-mono">
         © 2026 Stick & Grow // Founder-Led Pipeline Systems
       </div>
     </div>

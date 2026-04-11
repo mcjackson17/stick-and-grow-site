@@ -19,13 +19,13 @@ const StickAndGrowCascadingVSL = () => {
   return (
     <div className="min-h-screen bg-[#f8f9fa] text-[#111] p-4 md:p-8 selection:bg-[#00ead9]/40 overflow-x-hidden">
       
-      <div className="max-w-7xl mx-auto border-[3px] border-black bg-white relative shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
+      <div className="max-w-7xl mx-auto border-[3px] border-black bg-white relative shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
         
         <div className="absolute inset-0 opacity-[0.04] pointer-events-none" 
              style={{ backgroundImage: 'linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
 
         {/* --- NAVIGATION --- */}
-        <nav className="relative z-10 flex justify-between items-center p-8 border-b-[3px] border-black bg-white">
+        <nav className="relative z-10 flex justify-between items-center p-4 md:p-8 border-b-[3px] border-black bg-white">
           <div className="text-2xl font-black bg-black text-white px-3 py-1 -rotate-2">
             STICK & GROW
           </div>
@@ -42,17 +42,17 @@ const StickAndGrowCascadingVSL = () => {
           </div>
           
           {/* THE HEADLINE FIX: Cleaned up spacing, no more hacks, natural font rendering */}
-          <h1 className="text-5xl md:text-7xl font-black mb-10 tracking-tighter uppercase mx-auto max-w-6xl flex flex-col items-center">
-            <span className="block mb-2 whitespace-nowrap">
+          <h1 className="text-[clamp(1.75rem,7vw,3rem)] md:text-5xl lg:text-7xl font-black mb-10 tracking-tighter uppercase mx-auto max-w-6xl flex flex-col items-center">
+            <span className="block mb-2 md:whitespace-nowrap">
               Your content should
             </span>
-            <span className="block mb-2 whitespace-nowrap">
+            <span className="block mb-2 md:whitespace-nowrap">
               hand you{' '}
               <span className="inline-block bg-[#00ead9] px-2 pb-1 border-2 border-black -rotate-1 relative top-[-4px]">
                 leads
-              </span>,
+              </span>
             </span>
-            <span className="block whitespace-nowrap">
+            <span className="block md:whitespace-nowrap">
               not just likes.
             </span>
           </h1>
@@ -100,9 +100,9 @@ const StickAndGrowCascadingVSL = () => {
         {/* --- 2. THE PROBLEM --- */}
         <section className="relative z-10 p-8 md:p-16 border-b-[3px] border-black bg-red-50">
           <div className="max-w-6xl mx-auto">
-            <div className="flex items-center justify-center gap-3 mb-8">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-3 mb-8">
               <AlertTriangle className="text-red-500" size={32} />
-              <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-center">The Founder's Content Trap</h2>
+              <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter text-center">The Founder's Content Trap</h2>
             </div>
             
             <p className="text-center font-bold text-xl mb-12 text-gray-700">You know you need to build authority, but every time you try, you fall into one of these losing traps:</p>
@@ -128,7 +128,7 @@ const StickAndGrowCascadingVSL = () => {
 
         {/* --- 3. THE TIMELINE --- */}
         <section className="relative z-10 p-8 md:p-16 border-b-[3px] border-black bg-white">
-          <h2 className="text-4xl font-black uppercase tracking-tighter mb-12 text-center">The 30-Day Pipeline Sprint</h2>
+          <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-12 text-center">The 30-Day Pipeline Sprint</h2>
           <div className="flex flex-col md:flex-row gap-6">
             {[
               { day: "Day 01", title: "The Brain Dump", text: "A 45-min extraction call to capture your tone, frameworks, and unique POV." },
@@ -177,7 +177,7 @@ const StickAndGrowCascadingVSL = () => {
         {/* --- 5. THE SYSTEM --- */}
         <section className="relative z-10 p-8 md:p-16 border-b-[3px] border-black bg-white">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-4">The Content Engine</h2>
+            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-4">The Content Engine</h2>
             <p className="text-lg font-bold text-gray-600">The exact deliverables you get every single week.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -199,7 +199,7 @@ const StickAndGrowCascadingVSL = () => {
 
         {/* --- 6. TESTIMONIALS --- */}
         <section className="relative z-10 p-8 md:p-16 border-b-[3px] border-black bg-[#f4f4f5] overflow-hidden">
-          <h2 className="text-4xl font-black uppercase tracking-tighter mb-12 text-center">Proof It Works</h2>
+          <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-12 text-center">Proof It Works</h2>
           <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
             {[
               { text: "Dan and his team finally solved the founder-led motion for us. I talk for 45 minutes, and they turn my actual thoughts into pipeline. Best ROI of the year.", author: "Sarah Jenkins", role: "CEO @ TechFlow", color: "bg-yellow-200" },
@@ -220,7 +220,7 @@ const StickAndGrowCascadingVSL = () => {
         {/* --- 7. FOUNDER BIO --- */}
         <section className="relative z-10 p-8 md:p-16 border-b-[3px] border-black bg-[#fdfdfd] flex flex-col md:flex-row gap-12 items-center">
           
-          <div className="w-64 h-80 bg-white border-[3px] border-black p-3 pb-12 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] -rotate-3 shrink-0 flex flex-col relative group hover:rotate-0 transition-transform">
+          <div className="w-64 h-80 bg-white border-[3px] border-black p-3 pb-12 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] -rotate-3 shrink-0 flex flex-col relative group hover:rotate-0 transition-transform mx-auto md:mx-0">
             <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-16 h-8 bg-[#00ead9]/40 border border-black/20 backdrop-blur-sm -rotate-2 z-10" />
             
             <div className="flex-1 border-2 border-black overflow-hidden bg-gray-100 relative">
@@ -251,7 +251,7 @@ const StickAndGrowCascadingVSL = () => {
 
         {/* --- 8. OBJECTION CRUSHER (FAQ) --- */}
         <section className="relative z-10 p-8 md:p-16 border-b-[3px] border-black bg-white">
-          <h2 className="text-4xl font-black uppercase tracking-tighter mb-12 text-center">Skeptical? Good.</h2>
+          <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-12 text-center">Skeptical? Good.</h2>
           <div className="max-w-3xl mx-auto space-y-4">
             {[
               { q: "Will the AI make me sound like a generic robot?", a: "No. We don't use AI to write from scratch. We use it to format and scale the literal transcripts of your 45-minute extraction calls. It's 100% your ideas and your tone." },
@@ -275,10 +275,10 @@ const StickAndGrowCascadingVSL = () => {
 
         {/* --- 9. FINAL CTA --- */}
         <section className="p-8 md:p-20 text-center bg-[#00ead9] relative">
-          <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-8 mt-4">
+          <h2 className="text-3xl md:text-5xl lg:text-7xl font-black uppercase tracking-tighter mb-8 mt-4">
             Start posting <span className="bg-black text-white px-4 py-1 inline-block -rotate-2">for revenue.</span>
           </h2>
-          <a href="https://calendly.com/dan-mcdermott/let-s-talk" target="_blank" rel="noopener noreferrer" className="bg-white text-black px-12 py-6 text-2xl font-black border-[3px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all inline-block">
+          <a href="https://calendly.com/dan-mcdermott/let-s-talk" target="_blank" rel="noopener noreferrer" className="bg-white text-black px-8 py-4 text-lg md:px-12 md:py-6 md:text-2xl font-black border-[3px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all inline-block">
             BUILD MY CONTENT ENGINE
           </a>
         </section>

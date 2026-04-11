@@ -29,9 +29,14 @@ const StickAndGrowCascadingVSL = () => {
           <div className="text-2xl font-black bg-black text-white px-3 py-1 -rotate-2">
             STICK & GROW
           </div>
-          <a href="https://calendly.com/dan-mcdermott/let-s-talk" target="_blank" rel="noopener noreferrer" className="bg-[#00ead9] border-2 border-black font-black px-6 py-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all uppercase text-sm">
-            Get Started
-          </a>
+          <div className="flex items-center gap-4 md:gap-6">
+            <a href="/blog" className="font-black uppercase text-sm hover:text-[#cc01ff] transition-colors">
+              Blog
+            </a>
+            <a href="https://calendly.com/dan-mcdermott/let-s-talk" target="_blank" rel="noopener noreferrer" className="bg-[#00ead9] border-2 border-black font-black px-4 py-2 md:px-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all uppercase text-sm">
+              Get Started
+            </a>
+          </div>
         </nav>
 
         {/* --- 1. HERO SECTION --- */}

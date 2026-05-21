@@ -50,7 +50,7 @@ export default function BlogPost({ post }) {
       </div>
 
       {/* MDX Content */}
-      <div className="max-w-3xl">
+      <div className="max-w-3xl mx-auto">
         <Suspense fallback={<div className="animate-pulse h-96 bg-gray-100 border-2 border-black" />}>
           <MDXRemote
             source={content}

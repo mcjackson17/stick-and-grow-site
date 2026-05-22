@@ -59,7 +59,7 @@ export default function BlogPost({ post }) {
                 remarkPlugins: [remarkGfm],
                 rehypePlugins: [
                   rehypeSlug,
-                  [rehypeAutolinkHeadings, { behavior: 'wrap' }],
+                  [rehypeAutolinkHeadings, { behavior: 'append', properties: { className: ['heading-anchor'], ariaLabel: 'Anchor link' }, content: { type: 'text', value: ' #' } }],
                 ],
               },
             }}

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Play, Scissors, Crosshair, Activity, Filter, Linkedin, ArrowRight, CheckSquare, XSquare, Radio, HelpCircle, AlertTriangle } from 'lucide-react';
+import { Play, Scissors, Crosshair, Activity, Filter, Linkedin, ArrowRight, CheckSquare, XSquare, Radio, HelpCircle, AlertTriangle, Database, ClipboardCheck } from 'lucide-react';
 
 const StickAndGrowCascadingVSL = () => {
   const [activeFaq, setActiveFaq] = useState(null);
@@ -178,6 +178,73 @@ const StickAndGrowCascadingVSL = () => {
                 {i !== 4 && <ArrowRight className="hidden md:block absolute -right-5 top-1/2 -translate-y-1/2 text-black z-10" size={24}/>}
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* --- 4B. THE SIGNAL REPORT --- */}
+        <section className="relative z-10 p-8 md:p-16 border-b-[3px] border-black bg-white">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-block border-2 border-black px-3 py-1 text-xs font-black uppercase tracking-widest mb-6 bg-[#cc01ff] text-white -rotate-1 font-mono">
+                The Product
+              </div>
+              <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-4">Owned Intent, Not Rented Intent</h2>
+              <p className="text-lg font-bold text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                ABM vendors sell you third-party data that guesses who might be in-market. We hand you a list built from first-party behavior on your own show. You don't guess who's buying. You watched them raise their hand.
+              </p>
+            </div>
+
+            {/* Rented vs Owned contrast */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-14 max-w-4xl mx-auto">
+              <div className="border-2 border-black p-6 bg-gray-100 -rotate-1 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                <div className="flex items-center gap-2 mb-3"><Database className="text-gray-400" size={24}/><h3 className="text-xl font-black uppercase text-gray-500">Rented Intent</h3></div>
+                <p className="font-bold text-gray-500 text-sm leading-relaxed">Bought from a data vendor. A probability score that an account might be researching your category somewhere on the internet. You never see the behavior.</p>
+              </div>
+              <div className="border-2 border-black p-6 bg-[#e0fcf9] rotate-1 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                <div className="flex items-center gap-2 mb-3"><Activity className="text-[#cc01ff]" size={24}/><h3 className="text-xl font-black uppercase">Owned Intent</h3></div>
+                <p className="font-bold text-gray-700 text-sm leading-relaxed">Generated on your own show. The exact accounts that showed up live, stayed, asked questions, and came back. The behavior is the proof.</p>
+              </div>
+            </div>
+
+            {/* The artifact mock */}
+            <div className="border-[3px] border-black bg-white shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_#cc01ff] max-w-4xl mx-auto">
+              <div className="flex items-center justify-between border-b-[3px] border-black bg-black text-white px-5 py-3">
+                <div className="flex items-center gap-3">
+                  <ClipboardCheck size={20} className="text-[#00ead9]"/>
+                  <span className="font-black uppercase tracking-wider text-sm font-mono">Signal Report</span>
+                </div>
+                <span className="font-mono text-[10px] md:text-xs uppercase tracking-widest text-gray-300">Delivered weekly &rarr; Sales</span>
+              </div>
+
+              <div className="divide-y-2 divide-dashed divide-gray-200">
+                {[
+                  { score: 94, company: "Northwind Logistics", role: "VP Operations", signals: ["Attended live", "Stayed 41m", "Asked: pricing", "Returned wk 2"] },
+                  { score: 89, company: "Apex Health Systems", role: "Director, IT", signals: ["Attended live", "Asked: integration", "Downloaded teardown"] },
+                  { score: 83, company: "Cobalt Fintech", role: "Head of RevOps", signals: ["Attended live", "Stayed 33m", "DM'd the founder"] },
+                  { score: 76, company: "Meridian Software", role: "Founder / CEO", signals: ["Watched replay", "Downloaded teardown", "Engaged 3 posts"] }
+                ].map((row, i) => (
+                  <div key={i} className="flex flex-col md:flex-row md:items-center gap-4 p-5 hover:bg-gray-50 transition-colors">
+                    <div className="flex items-center gap-4 md:w-72 shrink-0">
+                      <div className={`w-14 h-14 shrink-0 border-2 border-black flex items-center justify-center font-black text-xl shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] ${row.score >= 90 ? 'bg-[#cc01ff] text-white' : 'bg-[#00ead9] text-black'}`}>{row.score}</div>
+                      <div>
+                        <div className="font-black uppercase text-sm leading-tight">{row.company}</div>
+                        <div className="text-xs font-bold text-gray-500 font-mono uppercase tracking-wide">{row.role}</div>
+                      </div>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {row.signals.map((s, j) => (
+                        <span key={j} className="inline-block border-2 border-black bg-white px-2 py-1 text-[11px] font-black uppercase tracking-wide font-mono">{s}</span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="border-t-[3px] border-black bg-[#f4f4f5] px-5 py-3 text-center font-mono text-[10px] md:text-xs font-bold uppercase tracking-widest text-gray-500">
+                Scored from live behavior. No guesswork. Handed to your sales team every week.
+              </div>
+            </div>
+            <p className="text-center text-xs font-bold text-gray-400 mt-4 font-mono uppercase tracking-widest">Sample report. Your accounts and signals will be real.</p>
           </div>
         </section>
 

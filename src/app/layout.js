@@ -4,8 +4,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Stick & Grow | Founder-Led Pipeline Systems',
-  description: 'We extract your expertise into a repeatable system. You get the authority; your sales team gets the MQL list.',
+  title: 'Stick & Grow | Turn Your Weekly Show Into Pipeline',
+  description: 'We turn your founder-led weekly live show into a qualified sales pipeline. The show is the engine; the in-market account list handed to your sales team is the product. Audience growth is the byproduct.',
 }
 
 export default function RootLayout({ children }) {

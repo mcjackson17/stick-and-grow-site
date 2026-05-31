@@ -61,7 +61,7 @@ const StickAndGrowCascadingVSL = () => {
           </h1>
 
           <p className="text-xl font-bold mb-12 text-gray-700 max-w-2xl mx-auto leading-relaxed">
-            We turn your weekly live show into a qualified sales pipeline. You show up on camera for one hour. We turn the engagement into a list of in-market accounts and hand it to your sales team.
+            You host a weekly show. You show up for one hour; we do everything else. We turn that hour into a full week of content and a list of in-market accounts, then hand the list to your sales team.
           </p>
 
           <div className="w-full max-w-4xl relative mb-12 group">
@@ -113,7 +113,7 @@ const StickAndGrowCascadingVSL = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               {[
                 { title: "Trap 1: The Vanity Loop", text: "You post. Likes climb, impressions look great, and none of it shows up in your CRM. Reach feels like progress, but your sales team has nothing new to call." },
-                { title: "Trap 2: The Ghostwriter Gap", text: "You hire a generic agency. They optimize for engagement metrics, not buying signals. Nobody is tracking who is actually in-market, so the leads never materialize." },
+                { title: "Trap 2: The Ghostwriter Gap", text: "You hire a generic agency. They chase vanity metrics like reach and likes, not buying signals. Nobody tracks who is actually in-market, so the leads never materialize." },
                 { title: "Trap 3: The One-Hour Bottleneck", text: "You're your own best salesperson, but you can only be in so many rooms. Your magnetism never scales past the calls you personally take." }
               ].map((trap, i) => (
                 <div key={i} className={`bg-white border-2 border-black p-6 shadow-[6px_6px_0px_0px_#ff4d4f] flex flex-col ${i === 1 ? 'rotate-1' : '-rotate-1'}`}>
@@ -124,7 +124,32 @@ const StickAndGrowCascadingVSL = () => {
             </div>
 
             <div className="text-center bg-white border-2 border-black p-6 rotate-1 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] max-w-3xl mx-auto">
-              <p className="text-xl font-black uppercase tracking-tighter">The fix isn't more content. It's a system that turns attention into a list of buyers your sales team can close.</p>
+              <p className="text-xl font-black uppercase tracking-tighter">The fix isn't louder content. It's a system that turns the attention you earn into a list of buyers your sales team can close.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* --- STUPIDLY SIMPLE --- */}
+        <section className="relative z-10 p-8 md:p-16 border-b-[3px] border-black bg-white">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-4">The Offer Is Stupidly Simple</h2>
+              <p className="text-lg font-bold text-gray-600 max-w-2xl mx-auto">You do one thing. We do everything else. Your sales team gets the payoff.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                { num: "1", who: "You", color: "bg-[#cc01ff] text-white", title: "Show up for one hour", text: "On camera, once a week, as yourself. Bring your expertise and your opinions. That's the whole job." },
+                { num: "2", who: "We", color: "bg-[#00ead9] text-black", title: "Run the entire system", text: "We produce the show, cut the clips, write the posts and newsletter, build the lead magnets, and track every buying signal across every surface." },
+                { num: "3", who: "Your sales team", color: "bg-black text-white", title: "Gets a list of buyers", text: "Every week, the accounts that raised their hand. Warm, qualified, and ready to work. No cold calling." }
+              ].map((s, i) => (
+                <div key={i} className={`border-[3px] border-black p-8 bg-white relative shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] ${i % 2 === 0 ? '-rotate-1' : 'rotate-1'}`}>
+                  <div className={`w-14 h-14 ${s.color} border-2 border-black flex items-center justify-center font-black text-2xl mb-5 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]`}>{s.num}</div>
+                  <div className="text-[10px] font-black uppercase tracking-widest text-[#cc01ff] mb-2 font-mono">{s.who}</div>
+                  <h3 className="text-2xl font-black mb-3 uppercase tracking-tight">{s.title}</h3>
+                  <p className="font-bold text-gray-600 leading-relaxed">{s.text}</p>
+                  {i !== 2 && <ArrowRight className="hidden md:block absolute -right-6 top-1/2 -translate-y-1/2 text-black z-10" size={28}/>}
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -137,7 +162,7 @@ const StickAndGrowCascadingVSL = () => {
               <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter text-center">The Heartbeat: Your Weekly Show</h2>
             </div>
             <p className="text-center font-bold text-xl mb-12 text-gray-700 max-w-3xl mx-auto">
-              Engagement <span className="bg-[#00ead9] px-1 border border-black">is</span> the buying signal. A recurring live show is the strongest signal you can generate, because showing up live beats a click, and a click beats a like.
+              Most metrics are <span className="bg-[#00ead9] px-1 border border-black">noise</span>. Behavior is the signal. A live show generates the strongest behavioral signal there is, because showing up live beats a click, and a click beats a like.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -167,7 +192,7 @@ const StickAndGrowCascadingVSL = () => {
               { step: "01", icon: <Radio/>, title: "The Show", text: "Your weekly live show. The heartbeat and the highest-signal asset you produce." },
               { step: "02", icon: <Scissors/>, title: "Clips & Posts", text: "One taping repurposed into a week of founder-led content. Audience grows as a byproduct." },
               { step: "03", icon: <Crosshair/>, title: "Capture Intent", text: "Lead magnets and hand-raiser posts engineered to surface in-market buyers." },
-              { step: "04", icon: <Activity/>, title: "Track Signals", text: "Engagement scored across every surface. Behavior, not vanity, tells us who's buying." },
+              { step: "04", icon: <Activity/>, title: "Track Signals", text: "Every signal scored across every surface. Behavior, not vanity, tells us who's buying." },
               { step: "05", icon: <Filter/>, title: "Qualified Pipeline", text: "Signals filtered into a warm ABM list and handed to your sales team. The product." }
             ].map((node, i) => (
               <div key={i} className="flex-1 border-2 border-black p-6 relative bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex flex-col">
@@ -255,7 +280,7 @@ const StickAndGrowCascadingVSL = () => {
             {[
               { day: "Day 01", title: "The Extraction", text: "A 45-min call to capture your voice, frameworks, and POV, and to design your show format." },
               { day: "Day 07", title: "The Show Goes Live", text: "Your first weekly show airs. The repurposing engine starts turning one taping into a week of content." },
-              { day: "Day 14", title: "Signals Online", text: "Engagement tracking is live across every surface. We start scoring who shows up, stays, and raises a hand." },
+              { day: "Day 14", title: "Signals Online", text: "Signal tracking is live across every surface. We start scoring who shows up, stays, and raises a hand." },
               { day: "Day 30", title: "Pipeline Flowing", text: "Your first qualified ABM list lands with your sales team. The loop is running and compounding." }
             ].map((step, i) => (
               <div key={i} className="flex-1 border-2 border-black p-6 relative bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
@@ -301,7 +326,7 @@ const StickAndGrowCascadingVSL = () => {
         <section className="relative z-10 p-8 md:p-16 border-b-[3px] border-black bg-white">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-4">What You Get</h2>
-            <p className="text-lg font-bold text-gray-600">One system, organized around your hour on camera.</p>
+            <p className="text-lg font-bold text-gray-600">A full content engine, with the show as its heartbeat. You get all of it.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -378,7 +403,7 @@ const StickAndGrowCascadingVSL = () => {
           <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-12 text-center">Skeptical? Good.</h2>
           <div className="max-w-3xl mx-auto space-y-4">
             {[
-              { q: "How is this different from a content agency?", a: "A content agency sells you posts and reach. We sell you a qualified pipeline. The show is the engine, and the in-market account list handed to your sales team is the product. Audience growth is the byproduct, not the goal." },
+              { q: "How is this different from a content agency?", a: "We do the content a great agency does: posts, clips, lead magnets, a newsletter. The difference is the finish line. A content agency stops at reach. We use your show to turn that content into buying signals, then hand your sales team a qualified list of in-market accounts. Pipeline is the product; audience growth is the byproduct." },
               { q: "What makes the list actually qualified?", a: "It's built from behavioral signals: who shows up live, who stays, who asks questions, who engages with your lead magnets. Live attendance is the strongest buying indicator there is. We never relabel passive followers as pipeline." },
               { q: "I don't have time to produce a show.", a: "You bring one hour on camera. We handle booking, run-of-show prep, production support, clipping, repurposing, engagement tracking, and building the list. Your hour is the only thing we can't do for you, and it's the part that's your moat." },
               { q: "Will the content still sound like me?", a: "Yes. Everything we publish comes straight from your show and your voice. We use AI to format and scale what you actually said, never to write from scratch. It's 100% your ideas and your tone." }

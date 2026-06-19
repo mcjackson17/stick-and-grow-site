@@ -1,6 +1,7 @@
 import { getAllPosts } from '@/lib/blog'
 import BlogCard from '@/components/blog/BlogCard'
 import BlogNav from '@/components/blog/BlogNav'
+import NewsletterSignup from '@/components/NewsletterSignup'
 
 export const metadata = {
   title: 'Blog | Stick & Grow — B2B SaaS Content Strategy',
@@ -45,6 +46,7 @@ export default function BlogPage() {
             </div>
           )}
         </section>
+        <NewsletterSignup className="border-b-0" />
       </div>
 
       <div className="max-w-7xl mx-auto text-center mt-8 text-xs font-black uppercase tracking-widest text-gray-400 font-mono">

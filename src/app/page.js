@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Play, Scissors, Crosshair, Activity, Filter, Linkedin, ArrowRight, CheckSquare, XSquare, Radio, HelpCircle, AlertTriangle, Database, ClipboardCheck } from 'lucide-react';
+import NewsletterSignup from '@/components/NewsletterSignup';
 
 const StickAndGrowCascadingVSL = () => {
   const [activeFaq, setActiveFaq] = useState(null);
@@ -422,6 +423,8 @@ const StickAndGrowCascadingVSL = () => {
             ))}
           </div>
         </section>
+
+        <NewsletterSignup />
 
         {/* --- 11. FINAL CTA --- */}
         <section className="p-8 md:p-20 text-center bg-[#00ead9] relative">

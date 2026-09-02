@@ -50,7 +50,7 @@ export default function Home() {
         </h1>
 
         <p className="text-xl font-bold mb-12 text-gray-700 max-w-3xl mx-auto leading-relaxed">
-          Your best material is already in your business: the results your customers got, and the expertise you have never written down. We get it onto the page, put it where your buyers are looking, and hand your sales team the accounts that engage with it.
+          We build content your buyers actually want to read: original research, articles that rank, customer results worth citing, and the expertise you have never written down. Then we track who engages with it and hand your sales team the accounts worth calling.
         </p>
 
         {/* VSL placeholder */}
@@ -168,7 +168,7 @@ export default function Home() {
               <li>&ldquo;How Northwind cut onboarding from 6 weeks to 9 days&rdquo;</li>
               <li>&ldquo;The pricing model we tried for a year and killed&rdquo;</li>
               <li>&ldquo;What 40 customer calls taught us about churn&rdquo;</li>
-              <li>&ldquo;Why we said no to our biggest prospect&rdquo;</li>
+              <li>&ldquo;The benchmark we ran across 200 onboarding teams&rdquo;</li>
             </ul>
           </div>
           </div>

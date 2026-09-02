@@ -31,8 +31,8 @@ const SURFACES = [
   {
     Icon: PenLine,
     label: 'Ongoing',
-    title: 'The blog',
-    text: 'The durable layer. Where your proof gets written down properly, indexed, and cited back to you by search engines and AI assistants when buyers go looking.',
+    title: 'Articles and research',
+    text: 'The durable layer, and the one where search still pays. Original research nobody else has run, plus articles built to rank and to get cited back to you by search engines and AI assistants when your buyers go looking.',
   },
   {
     Icon: Radio,

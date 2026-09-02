@@ -24,3 +24,27 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Client logo marquee. The track holds four copies of the list, so shifting
+   it exactly -25% lands copy two where copy one began: a seamless loop.
+   Four rather than two because the loop only stays seamless while the
+   copies left off-screen can still fill the container. */
+@keyframes sg-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-25%); }
+}
+
+.sg-marquee-track {
+  animation: sg-marquee 40s linear infinite;
+  will-change: transform;
+}
+
+.sg-marquee:hover .sg-marquee-track {
+  animation-play-state: paused;
+}
+
+/* Motion-sensitive visitors get a static, manually scrollable row instead. */
+@media (prefers-reduced-motion: reduce) {
+  .sg-marquee-track { animation: none; }
+  .sg-marquee { overflow-x: auto; }
+}

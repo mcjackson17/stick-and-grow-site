@@ -4,6 +4,7 @@ import {
   CheckSquare, UserRound, Swords, Search, BadgeCheck,
 } from 'lucide-react'
 import PageShell from '@/components/PageShell'
+import LogoMarquee from '@/components/LogoMarquee'
 import AuditCTA from '@/components/AuditCTA'
 import NewsletterSignup from '@/components/NewsletterSignup'
 import SignalReport from '@/components/SignalReport'
@@ -139,7 +140,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- 2. THE PROBLEM --- */}
+      {/* --- 2. CLIENT LOGOS --- */}
+      <LogoMarquee />
+
+      {/* --- 3. THE PROBLEM --- */}
       <section className="relative z-10 p-8 md:p-16 border-b-[3px] border-black bg-red-50">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-center gap-3 mb-8">

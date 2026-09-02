@@ -21,7 +21,7 @@ export default function PageShell({ children }) {
       </div>
 
       <div className="max-w-7xl mx-auto text-center mt-8 text-xs font-black uppercase tracking-widest text-gray-400 font-mono">
-        © 2026 Stick &amp; Grow // Proof-Led Content Engines
+        © 2026 Stick &amp; Grow // Content Operations For B2B SaaS
       </div>
     </div>
   )

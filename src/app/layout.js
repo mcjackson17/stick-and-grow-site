@@ -7,11 +7,11 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Stick & Grow | Content Engines Built On Proof, Not How-To',
+    default: 'Stick & Grow | Content Marketing Your Sales Team Can Actually Use',
     template: '%s',
   },
   description:
-    'Anyone with an AI subscription can write the how-to. Only you have the proof. Stick & Grow builds proof-led content engines for founder-led B2B SaaS: customer case studies and a weekly founder-visibility system that produces trackable pipeline.',
+    'A content operation that reports to sales every week: what we published, who engaged, and which accounts to call. Founder POV, competitive intelligence, SEO and AEO, and customer proof, run with AI where it wins and humans where it counts.',
 }
 
 export default function RootLayout({ children }) {

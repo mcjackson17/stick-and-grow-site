@@ -39,10 +39,10 @@ export default function Home() {
           For Founder-Led B2B SaaS
         </div>
 
-        <h1 className="text-[clamp(1.75rem,7vw,3rem)] md:text-5xl xl:text-7xl font-black mb-10 tracking-tighter uppercase mx-auto max-w-6xl flex flex-col items-center">
-          <span className="block mb-2 md:whitespace-nowrap">Most content builds</span>
-          <span className="block mb-2 md:whitespace-nowrap">an audience. Ours builds</span>
+        <h1 className="text-[clamp(2rem,8vw,3rem)] md:text-5xl lg:text-7xl xl:text-8xl font-black mb-10 tracking-tighter uppercase mx-auto max-w-6xl flex flex-col items-center">
+          <span className="block mb-2 md:whitespace-nowrap">Turn your content</span>
           <span className="block md:whitespace-nowrap">
+            into{' '}
             <span className="inline-block bg-[#00ead9] px-2 pb-1 border-2 border-black -rotate-1 relative top-[-4px]">
               pipeline.
             </span>

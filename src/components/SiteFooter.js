@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { CALENDLY_URL, NAV_LINKS } from '@/lib/site'
+import { CALENDLY_URL, FLAT_NAV_LINKS } from '@/lib/site'
 
 export default function SiteFooter() {
   return (
@@ -15,7 +15,7 @@ export default function SiteFooter() {
         </div>
 
         <div className="flex flex-wrap gap-x-8 gap-y-3">
-          {NAV_LINKS.map(link => (
+          {FLAT_NAV_LINKS.map(link => (
             <Link
               key={link.href}
               href={link.href}

@@ -6,8 +6,17 @@ export const AUDIT_URL = 'https://audit.stickandgrow.co'
 
 export const SITE_URL = 'https://stickandgrow.co'
 
+// An entry with `children` renders as a dropdown in the nav.
 export const NAV_LINKS = [
-  { href: '/case-study-creation', label: 'Case Studies' },
-  { href: '/content-engine', label: 'Content Engine' },
+  {
+    label: 'Services',
+    children: [
+      { href: '/case-study-creation', label: 'Case Studies' },
+      { href: '/content-engine', label: 'Content Engine' },
+    ],
+  },
   { href: '/blog', label: 'Blog' },
 ]
+
+// The footer lists every destination flat, with no grouping.
+export const FLAT_NAV_LINKS = NAV_LINKS.flatMap(link => link.children ?? [link])

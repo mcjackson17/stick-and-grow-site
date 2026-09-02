@@ -75,6 +75,10 @@ const INPUTS = [
   },
 ]
 
+// Advisory work from Dan's own consulting practice, kept deliberately short
+// and skewed to B2B SaaS. Not Stick & Grow engagements: see the bio label.
+const CONSULTED_FOR = ['Ahrefs', 'The Hustle', 'Lemon.io', 'ReCart', 'UserLeap']
+
 export default function Home() {
   return (
     <PageShell>
@@ -392,6 +396,17 @@ export default function Home() {
           <p className="text-lg font-bold text-gray-700 leading-relaxed">
             That was the wrong answer. The right one is knowing what is worth making, using machines for the work they are genuinely better at, and putting experienced people everywhere taste actually decides the outcome. Then proving it weekly to the only audience that matters, which is your sales team.
           </p>
+
+          {/* Labelled separately from the client marquee: these were advisory
+              engagements of Dan's, not Stick & Grow builds. */}
+          <div className="mt-8 border-2 border-black bg-white p-5 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] -rotate-1 inline-block">
+            <div className="text-[10px] font-black uppercase tracking-widest text-[#cc01ff] mb-3 font-mono">
+              Consulted For
+            </div>
+            <p className="font-black uppercase text-sm md:text-base tracking-tight leading-relaxed">
+              {CONSULTED_FOR.join(' \u00b7 ')}
+            </p>
+          </div>
         </div>
       </section>
 

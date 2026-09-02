@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import {
-  ArrowRight, AlertTriangle, Bot, FileText, Play, Radio, Quote, Repeat,
-  CheckSquare, UserRound, Swords, Search, BadgeCheck, Library,
+  ArrowRight, AlertTriangle, Bot, FileText, Play, Radio, Quote,
+  CheckSquare, UserRound, Swords, Search, BadgeCheck,
 } from 'lucide-react'
 import PageShell from '@/components/PageShell'
 import AuditCTA from '@/components/AuditCTA'
@@ -361,74 +361,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- 8. THE UPGRADE LOGIC --- */}
-      <section className="relative z-10 p-8 md:p-16 border-b-[3px] border-black bg-[#f4f4f5]">
-        <div className="max-w-4xl mx-auto text-center">
-          <Repeat className="mx-auto mb-6 text-[#cc01ff]" size={40} />
-          <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tighter mb-6">
-            Most people start with one case study
-          </h2>
-          <p className="text-lg font-bold text-gray-700 leading-relaxed max-w-2xl mx-auto">
-            Then the question changes. A case study proves your buyers respond to proof and gives your sales team something worth sending. What it cannot do is happen again next month without you. That is the point where founders stop asking whether this works and start asking how to run it every week. That is the engine.
-          </p>
-        </div>
-      </section>
-
-      {/* --- 9. WHAT COMPOUNDS --- */}
-      <section className="relative z-10 p-8 md:p-16 border-b-[3px] border-black bg-white">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
-            <Library className="mx-auto mb-4 text-[#cc01ff]" size={40} />
-            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-4">You Keep The Machine</h2>
-            <p className="text-lg font-bold text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Most agencies leave you with a folder of documents and nothing else. The work also builds the substrate underneath it, and that substrate is yours: the thing that makes your next hire, your next agency, and your own AI tools immediately useful instead of starting from zero.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              { title: 'An organized content library', text: 'Everything you have published, structured and searchable, instead of scattered across drives, docs and someone’s laptop.' },
-              { title: 'A tagging system', text: 'Content mapped to themes, buyer stages and products, so you can find what exists before commissioning it again.' },
-              { title: 'Voice guides that get used', text: 'Not a brand document nobody opens. The working rules that keep output sounding like you, whoever or whatever is drafting.' },
-            ].map((item, i) => (
-              <div key={i} className={`border-2 border-black bg-white p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] ${i % 2 === 0 ? '-rotate-1' : 'rotate-1'}`}>
-                <h3 className="text-lg font-black mb-3 uppercase tracking-tight">{item.title}</h3>
-                <p className="font-bold text-gray-600 text-sm leading-relaxed">{item.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* --- 10. TRACK RECORD --- */}
-      <section className="relative z-10 p-8 md:p-16 border-b-[3px] border-black bg-[#f4f4f5] overflow-hidden">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4">
-            Run Four Times. Not A Hypothesis.
-          </h2>
-          <p className="text-lg font-bold text-gray-600 max-w-2xl mx-auto">
-            This operation has been built inside four very different organizations, including this one.
-          </p>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-          {[
-            { name: 'Copywriting Course', tag: 'Education', color: 'bg-yellow-200' },
-            { name: 'Vouris', tag: 'B2B Sales', color: 'bg-[#e0fcf9]' },
-            { name: 'Zen Healthcare IT', tag: 'Healthcare', color: 'bg-pink-100' },
-            { name: 'Stick & Grow', tag: 'This Agency', color: 'bg-[#00ead9]' },
-          ].map((org, i) => (
-            <div
-              key={i}
-              className={`${org.color} border-2 border-black p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] flex flex-col items-center justify-center text-center min-h-[140px] ${i % 2 === 0 ? 'rotate-1' : '-rotate-1'}`}
-            >
-              <div className="font-black text-base md:text-lg uppercase tracking-tight leading-tight mb-2">{org.name}</div>
-              <div className="text-[10px] font-bold text-gray-600 uppercase font-mono tracking-widest">{org.tag}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* --- 11. FOUNDER BIO --- */}
+      {/* --- 8. FOUNDER BIO --- */}
       <section className="relative z-10 p-8 md:p-16 border-b-[3px] border-black bg-[#fdfdfd] flex flex-col md:flex-row gap-12 items-center">
         <div className="w-64 h-80 bg-white border-[3px] border-black p-3 pb-12 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] -rotate-3 shrink-0 flex flex-col relative hover:rotate-0 transition-transform mx-auto md:mx-0">
           <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-16 h-8 bg-[#00ead9]/40 border border-black/20 backdrop-blur-sm -rotate-2 z-10" />
@@ -458,13 +391,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- 12. FREE AUDIT --- */}
+      {/* --- 9. FREE AUDIT --- */}
       <AuditCTA />
 
-      {/* --- 13. NEWSLETTER --- */}
+      {/* --- 10. NEWSLETTER --- */}
       <NewsletterSignup />
 
-      {/* --- 14. FINAL CTA --- */}
+      {/* --- 11. FINAL CTA --- */}
       <section className="p-8 md:p-20 text-center bg-[#00ead9] relative border-b-[3px] border-black">
         <h2 className="text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-tighter mb-8 mt-4 max-w-4xl mx-auto">
           Stop reporting impressions. Start reporting{' '}

@@ -63,7 +63,7 @@ export default async function BlogPostPage({ params }) {
       </div>
 
       <div className="max-w-7xl mx-auto text-center mt-8 text-xs font-black uppercase tracking-widest text-gray-400 font-mono">
-        &copy; 2026 Stick & Grow // Founder-Led Pipeline Systems
+        &copy; 2026 Stick & Grow // Proof-Led Content Engines
       </div>
     </div>
   )

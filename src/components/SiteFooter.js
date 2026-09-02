@@ -10,7 +10,7 @@ export default function SiteFooter() {
             STICK &amp; GROW
           </Link>
           <p className="font-bold text-sm text-gray-600 max-w-sm leading-relaxed">
-            Proof-led content engines for founder-led B2B SaaS. The stories only your company can tell, written down and put to work.
+            Proof-led content engines for founder-led B2B SaaS. The results and expertise already inside your business, written down and put to work.
           </p>
         </div>
 

@@ -50,7 +50,7 @@ export default function Home() {
         </h1>
 
         <p className="text-xl font-bold mb-12 text-gray-700 max-w-3xl mx-auto leading-relaxed">
-          We build the content only your company can produce: the results your customers actually got, and the expertise you have never written down. Then we track who engages with it and hand your sales team a list of the accounts worth calling.
+          Your best material is already in your business: the results your customers got, and the expertise you have never written down. We get it onto the page, put it where your buyers are looking, and hand your sales team the accounts that engage with it.
         </p>
 
         {/* VSL placeholder */}
@@ -162,7 +162,7 @@ export default function Home() {
           <div className="border-2 border-black bg-[#e0fcf9] p-6 rotate-1 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
             <div className="flex items-center gap-2 mb-4">
               <Sparkles className="text-[#cc01ff]" size={24} />
-              <h2 className="text-lg font-black uppercase">Only you can write this</h2>
+              <h2 className="text-lg font-black uppercase">Only you have this</h2>
             </div>
             <ul className="space-y-2 font-bold text-sm text-gray-700 font-mono">
               <li>&ldquo;How Northwind cut onboarding from 6 weeks to 9 days&rdquo;</li>

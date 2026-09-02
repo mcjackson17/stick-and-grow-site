@@ -5,6 +5,7 @@ import {
 } from 'lucide-react'
 import PageShell from '@/components/PageShell'
 import AuditCTA from '@/components/AuditCTA'
+import NewsletterSignup from '@/components/NewsletterSignup'
 import { CALENDLY_URL } from '@/lib/site'
 
 export const metadata = {
@@ -353,7 +354,10 @@ export default function Home() {
       {/* --- 9. FREE AUDIT --- */}
       <AuditCTA />
 
-      {/* --- 10. FINAL CTA --- */}
+      {/* --- 10. NEWSLETTER --- */}
+      <NewsletterSignup />
+
+      {/* --- 11. FINAL CTA --- */}
       <section className="p-8 md:p-20 text-center bg-[#00ead9] relative border-b-[3px] border-black">
         <h2 className="text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-tighter mb-8 mt-4 max-w-4xl mx-auto">
           Stop publishing what anyone could write. Start publishing{' '}

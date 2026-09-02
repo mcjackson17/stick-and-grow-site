@@ -6,6 +6,7 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import { format } from 'date-fns'
 import Image from 'next/image'
 import { mdxComponents } from './mdx-components'
+import NewsletterSignup from '@/components/NewsletterSignup'
 
 export default function BlogPost({ post }) {
   const { frontmatter, content, readingTime } = post
@@ -67,6 +68,8 @@ export default function BlogPost({ post }) {
           />
         </Suspense>
       </div>
+
+      <NewsletterSignup className="mt-16 -mx-8 md:-mx-16" />
 
       {/* CTA at bottom of every post */}
       <div className="mt-16 bg-[#00ead9] border-[3px] border-black p-8 md:p-12 text-center shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">

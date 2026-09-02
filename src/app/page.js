@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import {
-  ArrowRight, AlertTriangle, Bot, FileText, Radio, Sparkles,
+  ArrowRight, AlertTriangle, Bot, FileText, Play, Radio, Sparkles,
   CheckSquare, Quote, Repeat,
 } from 'lucide-react'
 import PageShell from '@/components/PageShell'
@@ -39,47 +39,38 @@ export default function Home() {
           For Founder-Led B2B SaaS
         </div>
 
-        <h1 className="text-[clamp(1.75rem,7vw,3rem)] md:text-5xl lg:text-7xl font-black mb-10 tracking-tighter uppercase mx-auto max-w-6xl flex flex-col items-center">
-          <span className="block mb-2 md:whitespace-nowrap">Anyone can write</span>
-          <span className="block mb-2 md:whitespace-nowrap">the how-to. Only you</span>
+        <h1 className="text-[clamp(1.75rem,7vw,3rem)] md:text-5xl xl:text-7xl font-black mb-10 tracking-tighter uppercase mx-auto max-w-6xl flex flex-col items-center">
+          <span className="block mb-2 md:whitespace-nowrap">Most content builds</span>
+          <span className="block mb-2 md:whitespace-nowrap">an audience. Ours builds</span>
           <span className="block md:whitespace-nowrap">
-            have the{' '}
             <span className="inline-block bg-[#00ead9] px-2 pb-1 border-2 border-black -rotate-1 relative top-[-4px]">
-              proof.
+              pipeline.
             </span>
           </span>
         </h1>
 
         <p className="text-xl font-bold mb-12 text-gray-700 max-w-3xl mx-auto leading-relaxed">
-          Your competitor has the same AI subscription you do. The guides, the listicles, the ultimate explainers: all of it is now a commodity anyone can produce in a minute. What nobody can produce is what your customers did with you, and what you have learned building the thing. We turn that into content that sells.
+          We build the content only your company can produce: the results your customers actually got, and the expertise you have never written down. Then we track who engages with it and hand your sales team a list of the accounts worth calling.
         </p>
 
-        {/* The thesis, shown rather than claimed */}
-        <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 text-left">
-          <div className="border-2 border-black bg-gray-100 p-6 -rotate-1 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
-            <div className="flex items-center gap-2 mb-4">
-              <Bot className="text-gray-400" size={24} />
-              <h2 className="text-lg font-black uppercase text-gray-500">Anyone can write this</h2>
+        {/* VSL placeholder */}
+        <div className="w-full max-w-4xl relative mb-16 group">
+          <div className="aspect-video bg-gray-100 border-[3px] border-black shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center cursor-pointer relative overflow-hidden transition-all group-hover:shadow-[20px_20px_0px_0px_#cc01ff]">
+            <div className="absolute top-4 left-4 flex gap-2">
+              <div className="w-3 h-3 rounded-full bg-black" />
+              <div className="w-3 h-3 rounded-full bg-black" />
             </div>
-            <ul className="space-y-2 font-bold text-sm text-gray-500 font-mono">
-              <li>&ldquo;What is [category]? A complete guide&rdquo;</li>
-              <li>&ldquo;10 best practices for [problem]&rdquo;</li>
-              <li>&ldquo;[Competitor] vs [Competitor]: which wins?&rdquo;</li>
-              <li>&ldquo;5 trends shaping [industry] in 2026&rdquo;</li>
-            </ul>
+            <div className="absolute bottom-4 left-4 right-4 h-2 bg-black/10 rounded-full border border-black overflow-hidden">
+              <div className="w-1/3 h-full bg-[#cc01ff]" />
+            </div>
+
+            <div className="w-24 h-24 bg-[#00ead9] border-[3px] border-black rounded-full flex items-center justify-center transition-transform group-hover:scale-110 group-hover:bg-[#cc01ff]">
+              <Play fill="black" size={40} className="ml-2" />
+            </div>
           </div>
 
-          <div className="border-2 border-black bg-[#e0fcf9] p-6 rotate-1 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
-            <div className="flex items-center gap-2 mb-4">
-              <Sparkles className="text-[#cc01ff]" size={24} />
-              <h2 className="text-lg font-black uppercase">Only you can write this</h2>
-            </div>
-            <ul className="space-y-2 font-bold text-sm text-gray-700 font-mono">
-              <li>&ldquo;How Northwind cut onboarding from 6 weeks to 9 days&rdquo;</li>
-              <li>&ldquo;The pricing model we tried for a year and killed&rdquo;</li>
-              <li>&ldquo;What 40 customer calls taught us about churn&rdquo;</li>
-              <li>&ldquo;Why we said no to our biggest prospect&rdquo;</li>
-            </ul>
+          <div className="absolute -bottom-6 -right-6 bg-[#e0fcf9] border-2 border-black p-3 text-sm font-black rotate-3 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] z-20 hidden md:block font-mono">
+            Watch: How content becomes pipeline (2 Min)
           </div>
         </div>
 
@@ -96,6 +87,11 @@ export default function Home() {
           >
             See The Content Engine
           </Link>
+        </div>
+
+        <div className="bg-yellow-200 border-2 border-black p-4 -rotate-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] text-left w-full md:max-w-sm mt-10">
+          <span className="font-black uppercase text-sm border-b-2 border-black pb-1 mb-2 block font-mono">The Promise:</span>
+          <span className="font-bold text-sm">Your first proof asset is live inside your first <span className="underline decoration-black decoration-4">30 days</span>.</span>
         </div>
       </section>
 
@@ -147,6 +143,36 @@ export default function Home() {
               It runs in two directions, and a serious company needs both.
             </p>
           </div>
+
+          {/* Shown rather than claimed */}
+          <div className="w-full max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 text-left">
+          <div className="border-2 border-black bg-gray-100 p-6 -rotate-1 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+            <div className="flex items-center gap-2 mb-4">
+              <Bot className="text-gray-400" size={24} />
+              <h2 className="text-lg font-black uppercase text-gray-500">Anyone can write this</h2>
+            </div>
+            <ul className="space-y-2 font-bold text-sm text-gray-500 font-mono">
+              <li>&ldquo;What is [category]? A complete guide&rdquo;</li>
+              <li>&ldquo;10 best practices for [problem]&rdquo;</li>
+              <li>&ldquo;[Competitor] vs [Competitor]: which wins?&rdquo;</li>
+              <li>&ldquo;5 trends shaping [industry] in 2026&rdquo;</li>
+            </ul>
+          </div>
+
+          <div className="border-2 border-black bg-[#e0fcf9] p-6 rotate-1 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+            <div className="flex items-center gap-2 mb-4">
+              <Sparkles className="text-[#cc01ff]" size={24} />
+              <h2 className="text-lg font-black uppercase">Only you can write this</h2>
+            </div>
+            <ul className="space-y-2 font-bold text-sm text-gray-700 font-mono">
+              <li>&ldquo;How Northwind cut onboarding from 6 weeks to 9 days&rdquo;</li>
+              <li>&ldquo;The pricing model we tried for a year and killed&rdquo;</li>
+              <li>&ldquo;What 40 customer calls taught us about churn&rdquo;</li>
+              <li>&ldquo;Why we said no to our biggest prospect&rdquo;</li>
+            </ul>
+          </div>
+          </div>
+
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="border-[3px] border-black p-8 bg-[#e0fcf9] -rotate-1 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
